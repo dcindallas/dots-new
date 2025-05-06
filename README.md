@@ -33,15 +33,6 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 ✅ Polybar with icons, weather, and Spotify control  
 ✅ Clean, organized configs for easy tweaks  
 
-## 📝 Usage
-
-Clone the repo:
-
-```bash
-git clone https://github.com/dcindallas/dots-new.git ~/git/dots-new
-
-
-![Screenshot_2025-05-05_11-39-29](https://github.com/user-attachments/assets/be2175ae-751a-4a90-a87a-0366820a484b)
-![Screenshot_2025-05-05_11-40-52](https://github.com/user-attachments/assets/2a5f8d45-c95a-4eec-8c99-4249431d5eb9)
-![Screenshot_2025-05-05_11-46-23](https://github.com/user-attachments/assets/264b8256-24d1-40c8-9c11-cddcbaf3ad3f)
-
+![Screenshot_2025-05-04_21-36-46](https://github.com/user-attachments/assets/4d061851-97dc-4aa2-90ff-fe73d0fde0a0)
+![Screenshot_2025-05-05_11-40-52](https://github.com/user-attachments/assets/2e5dd460-5aa5-4997-b643-b9ef50ba6389)
+![Screenshot_2025-05-05_11-46-23](https://github.com/user-attachments/assets/465dcab8-984a-43eb-bb4e-3f266653af6c)
