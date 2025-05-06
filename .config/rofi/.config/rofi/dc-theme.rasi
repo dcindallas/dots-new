@@ -1,0 +1,37 @@
+/**
+ * Base16 dc-dark-leaf ROFI Color theme
+ *
+ * Authors
+ *  Scheme: @duanecummins
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
+
+* {
+    red:                         rgba ( 255, 162, 99, 100 % );
+    blue:                        rgba ( 255, 255, 255, 100 % );
+    lightfg:                     rgba ( 168, 169, 185, 100 % );
+    lightbg:                     rgba ( 47, 52, 63, 100 % );
+    foreground:                  rgba ( 255, 255, 255, 100 % );
+    background:                  rgba ( 28, 28, 38, 100 % );
+    background-color:            rgba ( 28, 28, 38, 0 % );
+    separatorcolor:              @foreground;
+    border-color:                @foreground;
+    selected-normal-foreground:  @lightbg;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @background;
+    selected-active-background:  @blue;
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @red;
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    active-foreground:           @blue;
+    active-background:           @background;
+    urgent-foreground:           @red;
+    urgent-background:           @background;
+    alternate-normal-foreground: @lightfg;
+    alternate-normal-background: @lightbg;
+    alternate-active-foreground: @blue;
+    alternate-active-background: @lightbg;
+    alternate-urgent-foreground: @red;
+    alternate-urgent-background: @lightbg;
+}

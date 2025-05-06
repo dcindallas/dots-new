@@ -1,0 +1,234 @@
+# ───────────────────────────────────────────────
+#               i3 CONFIG (clean final)
+# ───────────────────────────────────────────────
+
+set $mod Mod4
+set $alt Mod1
+font pango:SF MonoRegular 10
+
+# ───────────────────────────────────────────────
+#         SPECIAL WINDOW ACTIONS (floating)
+# ───────────────────────────────────────────────
+
+for_window [class="kdeconnect"] floating enable
+for_window [class="Indicator-kdeconnect"] floating enable
+for_window [class="Xfce4-power-manager-settings"] floating enable
+for_window [class="Arandr"] floating enable
+for_window [class="YtGui.py"] floating enable
+for_window [class="Xarchiver"] floating enable
+for_window [class="copyq"] floating enable
+for_window [class="Guake_Preferences"] floating enable
+for_window [class="Xreader"] floating enable
+for_window [class="Msgcompose"] floating enable
+for_window [class="aranMsgcompose"] floating enable
+for_window [class="zoom"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="Volctl"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="arandr"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="Zoom"] floating enable
+for_window [class="File-roller"] floating enable
+for_window [class="Gpick"] floating enable
+for_window [class="PB_for_Desktop"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="Guake Preferences"] floating enable
+for_window [class="Yad"] floating enable
+for_window [class="gmic_qt"] floating enable
+for_window [class="vlc"] floating enable
+for_window [class="kdeconnect-sms"] floating enable
+for_window [instance="Msgcompose" class="thunderbird"] floating enable, resize set 1000px 750px
+for_window [title="Copying"] floating enable
+for_window [title="Deleting"] floating enable
+for_window [title="Moving"] floating enable
+for_window [title="Pithos"] floating enable
+for_window [title="File Operation Progress"] floating enable
+for_window [title="system-config-printer"] floating enable
+for_window [title="Calculator"] floating enable
+for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="^Preferences$"] floating enable
+for_window [window_role="setup"] floating enable
+for_window [class="^.*"] border pixel 0
+
+
+# ───────────────────────────────────────────────
+#               AUTOSTART PROGRAMS
+# ───────────────────────────────────────────────
+
+exec --no-startup-id dunst
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id feh --bg-fill /home/duane/Pictures/wallpaper/waves/d1.png
+exec --no-startup-id rclone mount google: ~/google
+exec --no-startup-id thunar --daemon
+exec --no-startup-id xrdb -load ~/.Xresources
+exec --no-startup-id kdeconnect-indicator
+exec --no-startup-id blueman-applet
+exec --no-startup-id numlockx
+exec --no-startup-id autotiling
+exec --no-startup-id picom -b
+exec --no-startup-id nm-applet
+exec --no-startup-id volctl
+exec --no-startup-id dex --autostart --environment i3
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ntfd
+exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 1480 "" 'betterlockscreen -l'
+exec --no-startup-id google-chrome-beta
+exec --no-startup-id geany
+exec --no-startup-id thunderbird
+
+# Auto-move apps to workspaces
+for_window [class="Google-chrome"] move container to workspace 1
+for_window [class="Geany"] move container to workspace 2
+for_window [class="Thunar"] move container to workspace 2
+for_window [class="thunderbird"] move container to workspace 3
+
+# ───────────────────────────────────────────────
+#                  KEYBINDINGS
+# ───────────────────────────────────────────────
+
+# Exit / Reload / Lock
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+w reload
+bindsym $mod+Shift+e exec "i3-nagbar -f 'SF Mono Medium 14' -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+bindsym $mod+Shift+q exec feh --recursive --bg-fill --randomize /home/duane/Pictures/wallpaper
+bindsym $mod+Escape exec betterlockscreen -l
+
+# Mouse modifier
+floating_modifier $mod
+
+# Gaps
+gaps inner 10
+gaps outer 0
+gaps top 45
+bindsym $mod+z gaps outer current plus 5
+bindsym $mod+Shift+z gaps outer current minus 5
+
+# Terminal
+bindsym $mod+Return exec kitty
+
+# Launchers
+bindsym $mod+a exec rofi -show drun -theme /home/duane/.config/rofi/style-menu.rasi
+bindsym F4 exec rofi -show power-menu -theme /home/duane/.config/rofi/style-power.rasi -modi power-menu:rofi-power-menu -width 300
+bindsym F6 exec dunstctl history-pop
+
+# Common apps
+bindsym Print exec --no-startup-id xfce4-screenshooter
+bindsym $alt+c exec gcolor2
+bindsym XF86HomePage exec --no-startup-id google-chrome-stable
+bindsym $alt+x exec google-chrome-beta
+bindsym $alt+f exec thunar
+bindsym $alt+g exec geany
+bindsym $alt+d exec discord
+bindsym $alt+s exec spotify
+bindsym $alt+m exec youtube-music
+bindsym $alt+p exec pithos
+bindsym $alt+t exec thunderbird
+bindsym XF86Calculator exec gnome-calculator
+
+# Volume controls
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl -a play-pause
+bindsym XF86AudioStop exec playerctl stop
+
+# Focus / Move
+bindsym $mod+q kill
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Layout
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout toggle split
+bindsym $mod+space floating toggle
+bindsym $mod+Shift+space focus mode_toggle
+
+# Scratchpad
+bindsym F2 move scratchpad
+bindsym F3 scratchpad show
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+
+workspace 1 output eDP1
+workspace 2 output eDP1
+workspace 3 output eDP1
+workspace 4 output eDP1
+workspace 5 output eDP1
+workspace 6 output eDP1
+workspace 7 output eDP1
+workspace 8 output eDP1
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+
+# Resize mode
+mode "resize" {
+  bindsym Left resize shrink width 5 px or 5 ppt
+  bindsym Down resize grow height 5 px or 5 ppt
+  bindsym Up resize shrink height 5 px or 5 ppt
+  bindsym Right resize grow width 5 px or 5 ppt
+  bindsym Return mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# ───────────────────────────────────────────────
+#              COLORS (Flavours)
+# ───────────────────────────────────────────────
+set $base00 #1E1F29
+set $base01 #223249
+set $base02 #404058
+set $base03 #31363d
+set $base04 #a8a9b9
+set $base05 #ffffff
+set $base06 #6159b5
+set $base07 #cacadc
+set $base08 #ffa263
+set $base09 #83db6b
+set $base0A #cffc49
+set $base0B #7e8772
+set $base0C #c1b28e
+set $base0D #3083dc
+set $base0E #cd3f45
+set $base0F #fcd049
+
+client.focused          $base00 $base00 $base05 $base02 $base02
+client.focused_inactive $base00 $base00 $base05 $base02 $base02
+client.unfocused        $base00 $base00 $base05 $base02 $base02
+client.urgent           $base0E $base0E $base05 $base0E $base0E
+client.placeholder      $base00 $base00 $base05 $base02 $base02
+client.background       $base00

@@ -1,0 +1,112 @@
+# ───────────────────────────────────────────────
+#               DUNST CONFIG (CLEAN)
+# ───────────────────────────────────────────────
+# See dunst(5) for all configuration options
+
+[global]
+### Display ###
+monitor = 0
+follow = none
+
+### Geometry ###
+width = 420
+height = 120
+origin = top-right
+offset = 20x70
+scale = 0
+notification_limit = 12
+
+### Progress bar ###
+progress_bar = true
+progress_bar_height = 5
+progress_bar_frame_width = 0
+progress_bar_min_width = 150
+progress_bar_max_width = 300
+
+### Misc display ###
+indicate_hidden = yes
+transparency = 0
+separator_height = 10
+padding = 20
+horizontal_padding = 20
+text_icon_padding = 20
+frame_width = 0
+gap_size = 5
+separator_color = frame
+sort = yes
+idle_threshold = 120
+
+### Text ###
+font = "Product Sans Light 10.5"
+line_height = 2
+markup = full
+format = "%s %n %b"
+alignment = left
+vertical_alignment = center
+show_age_threshold = 60
+ellipsize = end
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = no
+
+### Icons ###
+enable_recursive_icon_lookup = true
+icon_theme = Dracula
+icon_position = left
+min_icon_size = 28
+max_icon_size = 32
+icon_path = /home/duane/.icons/Boston/16/status/:/home/duane/.icons/Boston/16/devices/
+
+### History ###
+sticky_history = yes
+history_length = 50
+
+### Misc/Advanced ###
+dmenu = /usr/bin/dmenu -p dunst:
+browser = /usr/bin/xdg-open
+always_run_script = true
+title = Dunst
+class = Dunst
+corner_radius = 3
+ignore_dbusclose = false
+
+### Wayland ###
+force_xwayland = false
+
+### Legacy ###
+force_xinerama = false
+
+### Mouse actions ###
+mouse_left_click = close_current
+mouse_middle_click = do_action, close_current
+mouse_right_click = close_all
+
+# ───────────────────────────────────────────────
+#             EXPERIMENTAL FEATURES
+# ───────────────────────────────────────────────
+[experimental]
+per_monitor_dpi = false
+
+# ───────────────────────────────────────────────
+#              FLAVOURS COLORS
+# ───────────────────────────────────────────────
+# Optional frame/sep colors from Flavours
+# frame_color = "#404058"
+# separator_color = "#ffffff"
+# highlight = "#cffc49"
+
+[base16_low]
+msg_urgency = low
+background = "#3a3c4e"
+foreground = "#ffffff"
+
+[base16_normal]
+msg_urgency = normal
+background = "#3a3c4e"
+foreground = "#ffffff"
+
+[base16_critical]
+msg_urgency = critical
+background = "#cd3f45"
+foreground = "#ffffff"

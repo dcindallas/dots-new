@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=ayu-dark
+Comment=A theme with ayu color scheme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=ayu-dark
+MetacityTheme=ayu-dark
+IconTheme=Papirus
+CursorTheme=
+ButtonLayout=menu:minimize,maximize,close
