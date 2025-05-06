@@ -2,6 +2,8 @@
 
 Welcome to my personal dotfiles repository — a customized Arch Linux setup blending minimalism, style, and function. Built around the **FlatColor** theme (my twist on Dracula), flavored using **Flavours**, and rocking a seamless workflow across i3, Polybar, Rofi, Kitty, Dunst, and more.
 
+![Screenshot_2025-05-04_21-36-46](https://github.com/user-attachments/assets/4d061851-97dc-4aa2-90ff-fe73d0fde0a0)
+
 ## 🎨 Themes & Color Schemes
 
 - **FlatColor (my custom Dracula remix)**: [GitHub - FlatColor Theme](https://github.com/dracula/dracula-theme)  
@@ -10,9 +12,11 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **Dracula Icon theme**: [https://github.com/dracula/gtk](https://github.com/dracula/gtk#icons)
 - **Wallpaper**: [Dracula Wallpaper Collection](https://draculatheme.com/wallpaper)
 
-## 🎶 Extras
+- ## 🎶 Extras
 
 - **Spicetify (Spotify theming to match the desktop)**: [https://github.com/spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
+
+![Screenshot_2025-05-05_11-40-52](https://github.com/user-attachments/assets/2e5dd460-5aa5-4997-b643-b9ef50ba6389)
 
 ## 💻 Tools & Configs
 
@@ -24,6 +28,8 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **File Manager**: Thunar
 - **Status Bar**: Polybar
 - **Email Client**: Thunderbird (Dracula GTK skin + userChrome.css tweaks)
+- 
+![Screenshot_2025-05-05_11-46-23](https://github.com/user-attachments/assets/465dcab8-984a-43eb-bb4e-3f266653af6c)
 
 ## 🚀 Features
 
@@ -32,7 +38,3 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 ✅ Animations and subtle fades in Picom  
 ✅ Polybar with icons, weather, and Spotify control  
 ✅ Clean, organized configs for easy tweaks  
-
-![Screenshot_2025-05-04_21-36-46](https://github.com/user-attachments/assets/4d061851-97dc-4aa2-90ff-fe73d0fde0a0)
-![Screenshot_2025-05-05_11-40-52](https://github.com/user-attachments/assets/2e5dd460-5aa5-4997-b643-b9ef50ba6389)
-![Screenshot_2025-05-05_11-46-23](https://github.com/user-attachments/assets/465dcab8-984a-43eb-bb4e-3f266653af6c)
