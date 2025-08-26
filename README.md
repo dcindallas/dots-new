@@ -1,4 +1,4 @@
-# Dotfiles: The FlatColor x ColorBlox Theme x Flavours Setup
+# Dotfiles: The FlatColor x Mac Twilight Dark Theme x Flavours Setup
 
 Welcome to my personal dotfiles repository — a customized Arch Linux setup blending minimalism, style, and function. Built around the **FlatColor** theme (my twist on Dracula), flavored using **Flavours**, and rocking a seamless workflow across i3, Polybar, Rofi, Kitty, Dunst, and more.
 
