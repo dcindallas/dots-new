@@ -2,7 +2,7 @@
 
 Welcome to my personal dotfiles repository — a customized Arch Linux setup blending minimalism, style, and function. Built around the **FlatColor** theme (my twist on Dracula), flavored using **Flavours**, and rocking a seamless workflow across i3, Polybar, Rofi, Kitty, Dunst, and more.
 
-<img width="2560" height="1440" alt="2025-08-14_09-51_1" src="https://github.com/user-attachments/assets/9aa623de-f4be-47c0-892f-e0c26d257c0c" />
+<img width="2560" height="1440" alt="2025-08-26-10:07:49" src="https://github.com/user-attachments/assets/e1f6c802-a08a-4e3d-b06b-3bf9c9cd2bdd" />
 
 
 ## 🎨 Themes & Color Schemes
@@ -17,7 +17,7 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 
 - **Spicetify (Spotify theming to match the desktop)**: [https://github.com/spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
 
-<img width="2560" height="1440" alt="2025-08-14_09-51" src="https://github.com/user-attachments/assets/6001ac85-9293-4184-b78b-e213b7f3bddc" />
+<img width="2560" height="1440" alt="2025-08-26-09:57:35" src="https://github.com/user-attachments/assets/200cf346-0080-4e33-845e-8300cca0d51c" />
 
 ## 💻 Tools & Configs
 
@@ -30,7 +30,7 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **Status Bar**: Polybar
 - **Email Client**: Thunderbird (Dracula GTK skin + userChrome.css tweaks)
 - 
-<img width="2560" height="1440" alt="2025-08-14_09-47" src="https://github.com/user-attachments/assets/d7e17a82-8bba-4fa1-aef1-1cecff91ff3b" />
+<img width="2560" height="1440" alt="2025-08-26-01:55:48" src="https://github.com/user-attachments/assets/802d8af3-4657-4d66-a424-7a69a2f32351" />
 
 ## 🚀 Features
 
