@@ -1,6 +1,6 @@
 # Dotfiles: The FlatColor x Twilight x Everforest Theme
 
-Welcome to my personal dotfiles repository — a customized Arch Linux setup blending minimalism, style, and function. Built around the **FlatColor** theme (my twist on Dracula), flavored using **Flavours**, and rocking a seamless workflow across i3, Polybar, Rofi, Kitty, Dunst, and more.
+Welcome to my personal dotfiles repository — a customized Arch Linux setup blending minimalism, style, and function. Built around the **FlatColor** theme (my twist on Twilight), flavored using **Flavours**, and a seamless workflow across i3, Polybar, Rofi, Kitty, Dunst, and more.
 
 <img width="2560" height="1440" alt="2025-09-13-01:31:30" src="https://github.com/user-attachments/assets/9ed8580e-d2c6-4f90-aac5-cc11be026a43" />
 
