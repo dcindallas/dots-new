@@ -1,23 +1,23 @@
 ! Start flavours
-! Base16 dc-dark-leaf
-! Scheme: @duanecummins
+! Base16 Base16 Twilight (Restored)
+! Scheme: From original Base16 Twilight
 
-#define base00 #2f343f
-#define base01 #223249
-#define base02 #404058
-#define base03 #31363d
-#define base04 #a8a9b9
-#define base05 #ffffff
-#define base06 #6159b5
-#define base07 #cacadc
-#define base08 #ffa263
-#define base09 #83db6b
-#define base0A #cffc49
-#define base0B #7e8772
-#define base0C #c1b28e
-#define base0D #3083dc
-#define base0E #cd3f45
-#define base0F #fcd049
+#define base00 #25292a
+#define base01 #323537
+#define base02 #464b50
+#define base03 #5f5a60
+#define base04 #838184
+#define base05 #fefef9
+#define base06 #a7a7a7
+#define base07 #ffffff
+#define base08 #cf6a4c
+#define base09 #f6b26b
+#define base0A #d5d0a1
+#define base0B #8f9d6a
+#define base0C #7cada2
+#define base0D #7587a6
+#define base0E #9b859d
+#define base0F #a06d3c
 
 *foreground:   base05
 #ifdef background_opacity
@@ -51,12 +51,17 @@
 ! Xft Font Configuration
 ! ------------------------------------------------------------------------------
 
-Xft.autohint: 1
-Xft.antialias: 1
-Xft.hinting: true
-Xft.hintstyle: hintslight
-Xft.dpi: 96
-Xft.rgba: rgb
+Xft.autohint: 0
 Xft.lcdfilter: lcddefault
-Xcursor.size: 24
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+Xft.dpi: 109
+Xcursor.size: 16
+
+
+
+
+
 

@@ -1,0 +1,49 @@
+## CAVA Config: Smokula Edition by Duane Cummins
+
+[general]
+bars = 0                ; Auto-adjust bar count to terminal width
+bar_width = 1           ; Width of each bar in characters
+bar_spacing = 1         ; Space between bars
+; framerate = 60        ; Optional: uncomment to force refresh rate
+; sensitivity = 100     ; Initial sensitivity
+
+[input]
+method = pulse
+source = auto
+
+[output]
+method = ncurses
+orientation = bottom
+channels = stereo
+reverse = 0
+bar_delimiter = 0
+xaxis = none
+
+[color]
+# Start flavours
+[color]
+gradient = 1
+foreground = "#fefef9"
+gradient_color_1 = "#d5d0a1"
+gradient_color_2 = "#cf6a4c"
+;gradient_color_3 = "#9b859d"
+;gradient_color_4 = "#7587a6"
+;gradient_color_5 = "#a06d3c"
+;gradient_color_6 = "#a7a7a7"
+;gradient_color_7 = "#8f9d6a"
+;gradient_color_8 = "#5f5a60"
+;gradient_color_9 = "#cf6a4c"
+;gradient_color_10 = "#25292a"
+# End flavours
+
+
+[smoothing]
+; noise_reduction = 0.2      ; Optional: enable for smooth motion
+
+[eq]
+; Example EQ (uncomment to tweak frequency band response)
+; 1 = 1
+; 2 = 1
+; 3 = 1
+; 4 = 1
+; 5 = 1

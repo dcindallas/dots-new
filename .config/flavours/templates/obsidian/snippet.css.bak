@@ -1,0 +1,22 @@
+/* Obsidian Flavours Dynamic Snippet */
+
+body {
+  --background-primary: {{base00}};
+  --background-secondary: {{base01}};
+  --background-modifier-border: {{base03}};
+  --background-modifier-hover: {{base02}};
+  --background-modifier-selected: {{base02}};
+  --background-modifier-accent: {{base0D}};
+
+  --text-normal: {{base05}};
+  --text-muted: {{base04}};
+  --text-faint: {{base03}};
+  --text-accent: {{base0C}};
+  --text-error: {{base08}};
+  --text-warning: {{base09}};
+  --text-success: {{base0B}};
+  --text-highlight-bg: {{base0D}};
+
+  --interactive-accent: {{base0D}};
+  --interactive-accent-hover: {{base0C}};
+}

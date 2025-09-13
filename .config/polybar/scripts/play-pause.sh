@@ -2,10 +2,12 @@
 
 playerctlstatus=$(playerctl status 2> /dev/null)
 
-if [[ $playerctlstatus ==  "" ]]; then
-    echo ""
-elif [[ $playerctlstatus =~ "Playing" ]]; then
-    echo "%{A1:playerctl pause:}%{A}"
+if [[ -z "$playerctlstatus" ]]; then
+    echo ""  # No media player detected
+elif [[ "$playerctlstatus" == "Playing" ]]; then
+    # Show green pause icon
+    echo "%{A1:playerctl pause:}%{F#cf6a4c}󰏤%{F-}%{A}"
 else
-    echo "%{A1:playerctl play:}%{A}"
+    # Show red play icon
+    echo "%{A1:playerctl play:}%{F#8f9d6a}%{F-}%{A}"
 fi

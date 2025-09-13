@@ -1,0 +1,101 @@
+/**
+ * KDE Connect Rofi Theme
+ * Matches your wifi menu (Base16 Twilight Restored via dc-theme)
+ **/
+
+configuration {
+    show-icons:             false;
+    drun-display-format:    "{name}";
+    window-format:          "{w} · {c} · {t}";
+    font:                   "Hack Nerd Font Mono 10";
+}
+
+@theme "dc-theme"
+
+* {
+    background:      @lightbg;
+    background-alt:  @lightfg;
+    foreground:      @lightbg;
+    selected:        @lightfg;
+    active:          @blue;
+    urgent:          @red;
+    purple:          #9b859d;  /* your accent */
+}
+/*****----- Window -----*****/
+window {
+    transparency:           "real";
+    location:               center;
+    anchor:                 center;
+    width:                  420px;
+    border-radius:          9px;
+    border:                 1px;
+    border-color:           @background-alt;
+    background-color:       @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    spacing:                0px;
+    background-color:       transparent;
+    orientation:            vertical;
+    children:               [ "listbox" ];
+}
+
+listbox {
+    spacing:                15px;
+    padding:                25px;
+    background-color:       transparent;
+    orientation:            vertical;
+    children:               [ "message", "listview" ];
+}
+
+/*****----- Listview -----*****/
+listview {
+    columns:                1;
+    lines:                  6;
+    cycle:                  true;
+    dynamic:                true;
+    scrollbar:              false;
+    layout:                 vertical;
+    fixed-height:           true;
+    fixed-columns:          true;
+    spacing:                8px;
+    background-color:       transparent;
+    text-color:             @foreground;
+}
+
+/*****----- Elements -----*****/
+element {
+    padding:                10px 14px;
+    border-radius:          4px;
+    background-color:       transparent;
+    text-color:             @foreground;
+}
+
+element normal.normal { text-color: inherit; }
+element normal.urgent { background-color: @urgent; text-color: @foreground; }
+element normal.active { background-color: @active; text-color: @foreground; }
+element selected.normal { background-color: @selected; text-color: @foreground; }
+element selected.urgent { background-color: @urgent; text-color: @foreground; }
+element selected.active { background-color: @active; text-color: @foreground; }
+
+element-text {
+    background-color:       transparent;
+    text-color:             inherit;
+    vertical-align:         0.5;
+    horizontal-align:       0.0;
+}
+
+/*****----- Message (device name/status) -----*****/
+message {
+    background-color:       transparent;
+    text-color:             @purple;    /* use accent from your imported theme */
+    font:                   "Hack Nerd Font Mono Bold 11";
+}
+
+textbox {
+    padding:                10px;
+    border-radius:          4px;
+    background-color:       @background-alt;
+    text-color:             @foreground;
+}

@@ -1,19 +1,20 @@
+/* Start flavours */
 /**
- * Base16 Dracula ROFI Color theme
+ * Base16 Base16 Twilight (Restored) ROFI Color theme
  *
  * Authors
- *  Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+ *  Scheme: From original Base16 Twilight
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 234, 81, 178, 100 % );
-    blue:                        rgba ( 98, 214, 232, 100 % );
-    lightfg:                     rgba ( 241, 242, 248, 100 % );
-    background:                     rgba ( 58, 60, 78, 100 % );
-    foreground:                  rgba ( 233, 233, 244, 100 % );
-    lightbg:                  rgba ( 40, 41, 54, 100 % );
-    background-color:            rgba ( 40, 41, 54, 0 % );
+    red:                         rgba ( 207, 106, 76, 100 % );
+    blue:                        rgba ( 117, 135, 166, 100 % );
+    lightfg:                     rgba ( 167, 167, 167, 100 % );
+    background:                     rgba ( 37, 41, 42, 100 % );
+    foreground:                  rgba ( 254, 254, 249, 100 % );
+    lightbg:                  rgba ( 37, 41, 42, 100 % );
+    background-color:            rgba ( 37, 41, 42, 0 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -34,4 +35,6 @@
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
     alternate-urgent-background: @lightbg;
+    spacing:                     2;
 }
+/* End flavours */

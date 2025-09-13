@@ -1,13 +1,29 @@
 #!/bin/bash
 
-# see man zscroll for documentation of the following parameters
-zscroll -l 45 \
-        --delay 0.12 \
-        --scroll-padding " " \
-        --match-command "`dirname $0`/get_spotify_status.sh --status" \
-        --match-text "Playing" "--scroll 1" \
-        --match-text "Paused" "--scroll 0" \
-        --update-check true "`dirname $0`/get_spotify_status.sh" &
+# File that displays the text
+TEXT=$(~/.config/polybar/scripts/get_spotify_status.sh)
 
-wait
+# Only scroll if text isn't empty
+if [ -z "$TEXT" ]; then
+    echo ""
+    exit 0
+fi
 
+# Pad the text with spaces for a smoother scroll loop
+SCROLL_TEXT="   $TEXT"
+LENGTH=${#SCROLL_TEXT}
+POSITION_FILE="/tmp/spotify_scroll_pos"
+SPEED=0.1  # Adjust speed (in seconds)
+
+# Initialize position if not set
+if [ ! -f "$POSITION_FILE" ]; then
+    echo 0 > "$POSITION_FILE"
+fi
+
+POSITION=$(cat "$POSITION_FILE")
+POSITION=$(( (POSITION + 1) % LENGTH ))
+echo "$POSITION" > "$POSITION_FILE"
+
+# Create scrolling output
+SCROLL_OUTPUT="${SCROLL_TEXT:$POSITION}${SCROLL_TEXT:0:$POSITION}"
+echo "${SCROLL_OUTPUT:0:50}"  # Output first 50 chars (adjust for your Polybar width)

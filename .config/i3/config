@@ -4,7 +4,7 @@
 
 set $mod Mod4
 set $alt Mod1
-font pango:SF MonoRegular 10
+font pango:SF Mono 10
 
 # ───────────────────────────────────────────────
 #         SPECIAL WINDOW ACTIONS (floating)
@@ -18,10 +18,10 @@ for_window [class="YtGui.py"] floating enable
 for_window [class="Xarchiver"] floating enable
 for_window [class="copyq"] floating enable
 for_window [class="Guake_Preferences"] floating enable
-for_window [class="Xreader"] floating enable
+for_window [class="Evince"] floating enable
 for_window [class="Msgcompose"] floating enable
 for_window [class="aranMsgcompose"] floating enable
-for_window [class="zoom"] floating enable
+for_window [class="font-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Volctl"] floating enable
@@ -50,36 +50,59 @@ for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="^Preferences$"] floating enable
 for_window [window_role="setup"] floating enable
-for_window [class="^.*"] border pixel 0
+# make the ascii saver float + fullscreen with no border
+for_window [class="AsciiSaver"] floating enable, fullscreen enable, border pixel 0
 
+# --- Dropdown Kitty ---
+set $dropdown_class dropdown
+
+# 1) (optional) auto-spawn on login so it's always ready
+exec --no-startup-id kitty --class $dropdown_class
+
+# 2) Style + placement + send to scratchpad when the window appears
+for_window [instance="$dropdown_class"] floating enable
+for_window [instance="$dropdown_class"] border pixel 1
+for_window [instance="$dropdown_class"] move position center
+for_window [instance="$dropdown_class"] resize set 90 ppt 50 ppt
+for_window [instance="$dropdown_class"] move scratchpad
+
+# 3) Toggle key: target the dropdown instance via i3-msg criteria
+bindsym $mod+grave exec --no-startup-id i3-msg "[instance=\"$dropdown_class\"] scratchpad show"
 
 # ───────────────────────────────────────────────
 #               AUTOSTART PROGRAMS
 # ───────────────────────────────────────────────
 
-exec --no-startup-id dunst
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-fill /home/duane/Pictures/wallpaper/waves/d1.png
-exec --no-startup-id rclone mount google: ~/google
+exec --no-startup-id feh --bg-fill /home/duane/Pictures/wallpaper/35.png
+# exec --no-startup-id rclone mount google: ~/google
 exec --no-startup-id thunar --daemon
 exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id kdeconnect-indicator
+# exec --no-startup-id xsettingsd &
 exec --no-startup-id blueman-applet
 exec --no-startup-id numlockx
 exec --no-startup-id autotiling
-exec --no-startup-id picom -b
-exec --no-startup-id nm-applet
+exec --no-startup-id picom --experimental-backends -b
+# exec --no-startup-id nm-applet
 exec --no-startup-id volctl
 exec --no-startup-id dex --autostart --environment i3
-exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ntfd
-exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 1480 "" 'betterlockscreen -l'
-exec --no-startup-id google-chrome-beta
+# exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 1480 "" 'betterlockscreen -l'
+exec --no-startup-id playerctld daemon
+exec --no-startup-id google-chrome-stable
 exec --no-startup-id geany
 exec --no-startup-id thunderbird
+exec_always --no-startup-id /home/duane/.config/polybar/launch.sh
+exec --no-startup-id dunst
+# ASCII saver after 2 min idle; stop on activity
+# Lock after 12 min idle (10 min of saver), also stops saver first
+exec_always --no-startup-id ~/.config/i3/xidle-saver.sh
 
+# hide the curosr when typing or idle.
+# exec --no-startup-id xbanish
 # Auto-move apps to workspaces
-for_window [class="Google-chrome"] move container to workspace 1
+for_window [class="google-chrome-stable"] move container to workspace 1
 for_window [class="Geany"] move container to workspace 2
 for_window [class="Thunar"] move container to workspace 2
 for_window [class="thunderbird"] move container to workspace 3
@@ -92,18 +115,20 @@ for_window [class="thunderbird"] move container to workspace 3
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+w reload
 bindsym $mod+Shift+e exec "i3-nagbar -f 'SF Mono Medium 14' -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
-bindsym $mod+Shift+q exec feh --recursive --bg-fill --randomize /home/duane/Pictures/wallpaper
 bindsym $mod+Escape exec betterlockscreen -l
 
 # Mouse modifier
 floating_modifier $mod
 
 # Gaps
-gaps inner 10
+gaps inner 20
 gaps outer 0
-gaps top 45
+gaps top 55
+default_border pixel 0
 bindsym $mod+z gaps outer current plus 5
 bindsym $mod+Shift+z gaps outer current minus 5
+for_window [class="^.*"] border pixel 0
+
 
 # Terminal
 bindsym $mod+Return exec kitty
@@ -112,12 +137,18 @@ bindsym $mod+Return exec kitty
 bindsym $mod+a exec rofi -show drun -theme /home/duane/.config/rofi/style-menu.rasi
 bindsym F4 exec rofi -show power-menu -theme /home/duane/.config/rofi/style-power.rasi -modi power-menu:rofi-power-menu -width 300
 bindsym F6 exec dunstctl history-pop
+# bindsym F7 exec --no-startup-id ~/bin/wal2flavours_duane.sh
+bindsym $mod+e exec rofi -modi emoji -show emoji -theme ~/.config/rofi/dc-theme.rasi
 
 # Common apps
-bindsym Print exec --no-startup-id xfce4-screenshooter
+bindsym Print exec sh -c "sleep 3 && maim ~/Pictures/screenshots/$(date +%F-%T).png"
+bindsym $mod+Print exec xfce4-screenshooter
+bindsym $mod+w exec feh --randomize --bg-fill ~/Pictures/wallpaper/*
+
+
 bindsym $alt+c exec gcolor2
 bindsym XF86HomePage exec --no-startup-id google-chrome-stable
-bindsym $alt+x exec google-chrome-beta
+bindsym $alt+x exec google-chrome-stable
 bindsym $alt+f exec thunar
 bindsym $alt+g exec geany
 bindsym $alt+d exec discord
@@ -209,26 +240,36 @@ bindsym $mod+r mode "resize"
 # ───────────────────────────────────────────────
 #              COLORS (Flavours)
 # ───────────────────────────────────────────────
-set $base00 #1E1F29
-set $base01 #223249
-set $base02 #404058
-set $base03 #31363d
-set $base04 #a8a9b9
-set $base05 #ffffff
-set $base06 #6159b5
-set $base07 #cacadc
-set $base08 #ffa263
-set $base09 #83db6b
-set $base0A #cffc49
-set $base0B #7e8772
-set $base0C #c1b28e
-set $base0D #3083dc
-set $base0E #cd3f45
-set $base0F #fcd049
+# Start flavours
+## Base16 Base16 Twilight (Restored)
+# Author: From original Base16 Twilight
+#
+# You can use these variables anywhere in the i3 configuration file.
 
-client.focused          $base00 $base00 $base05 $base02 $base02
-client.focused_inactive $base00 $base00 $base05 $base02 $base02
-client.unfocused        $base00 $base00 $base05 $base02 $base02
+set $base00 #25292a
+set $base02 #464b50
+set $base02 #464b50
+set $base03 #5f5a60
+set $base04 #838184
+set $base05 #fefef9
+set $base06 #a7a7a7
+set $base07 #ffffff
+set $base08 #cf6a4c
+set $base09 #f6b26b
+set $base0A #d5d0a1
+set $base0B #8f9d6a
+set $base0C #7cada2
+set $base0D #7587a6
+set $base0E #9b859d
+set $base0F #a06d3c
+
+
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base07 $base00 $base05 $base02 $base02
+client.focused_inactive $base07 $base00 $base05 $base02 $base02
+client.unfocused        $base07 $base00 $base05 $base02 $base02
 client.urgent           $base0E $base0E $base05 $base0E $base0E
-client.placeholder      $base00 $base00 $base05 $base02 $base02
-client.background       $base00
+client.placeholder      $base07 $base00 $base05 $base02 $base02
+client.background       $base07
+# End flavours

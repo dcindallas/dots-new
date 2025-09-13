@@ -1,0 +1,47 @@
+@theme "dc-theme"   /* uses your palette vars like @lightbg, @lightfg, @blue, @red */
+
+* {
+  font: "Hack Nerd Font Mono 10";
+  background-color: @lightbg;
+  text-color: @lightfg;
+
+  /* selection colors flipped for contrast */
+  selection-background: @lightfg;
+  selection-foreground: @lightbg;
+}
+
+window {
+  transparency: "real";
+  location: center;
+  width: 900px;
+  border: 0px;
+  border-radius: 3px;
+  background-color: @lightbg;
+}
+
+mainbox { padding: 0px; }
+
+listview {
+  lines: 12;
+  dynamic: true;
+  cycle: false;
+  scrollbar: false;
+  spacing: 10px;
+  background-color: transparent;
+}
+
+element {
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: @lightbg;
+  text-color: @lightfg;
+}
+element selected {
+  background-color: @lightfg;
+  text-color: @lightbg;
+}
+
+entry, prompt {
+  background-color: @lightbg;
+  text-color: @lightfg;
+}
