@@ -1,23 +1,23 @@
-# Dotfiles: The FlatColor x Mac Twilight Dark Theme x Flavours Setup
+# Dotfiles: The FlatColor x Twilight x Everforest Theme
 
 Welcome to my personal dotfiles repository — a customized Arch Linux setup blending minimalism, style, and function. Built around the **FlatColor** theme (my twist on Dracula), flavored using **Flavours**, and rocking a seamless workflow across i3, Polybar, Rofi, Kitty, Dunst, and more.
 
-<img width="2560" height="1440" alt="2025-08-26-10:07:49" src="https://github.com/user-attachments/assets/e1f6c802-a08a-4e3d-b06b-3bf9c9cd2bdd" />
+<img width="2560" height="1440" alt="2025-09-13-01:31:30" src="https://github.com/user-attachments/assets/9ed8580e-d2c6-4f90-aac5-cc11be026a43" />
 
 
 ## 🎨 Themes & Color Schemes
 
 - **FlatColor (my custom Dracula remix)**: [GitHub - FlatColor Theme](https://github.com/dracula/dracula-theme)  
 - **Flavours (Base16/Dracula integration across apps)**: [https://github.com/Misterio77/flavours](https://github.com/Misterio77/flavours)
-- **Dracula GTK theme**: [https://draculatheme.com/gtk](https://draculatheme.com/gtk)
-- **Dracula Icon theme**: [https://github.com/dracula/gtk](https://github.com/dracula/gtk#icons)
-- **Wallpaper**: [Dracula Wallpaper Collection](https://draculatheme.com/wallpaper)
+- **Wallpaper**:
+- 
+<img width="1920" height="1080" alt="35" src="https://github.com/user-attachments/assets/27fa7501-7854-46c1-9972-f91935dc4aa1" />
 
 - ## 🎶 Extras
 
 - **Spicetify (Spotify theming to match the desktop)**: [https://github.com/spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
 
-<img width="2560" height="1440" alt="2025-08-26-09:57:35" src="https://github.com/user-attachments/assets/200cf346-0080-4e33-845e-8300cca0d51c" />
+<img width="2560" height="1440" alt="2025-09-13-01:25:04" src="https://github.com/user-attachments/assets/0b98b67f-ccd2-48a1-a725-c571722eaf4b" />
 
 ## 💻 Tools & Configs
 
@@ -28,13 +28,12 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **Compositor**: Picom (fading transitions)
 - **File Manager**: Thunar
 - **Status Bar**: Polybar
-- **Email Client**: Thunderbird (Dracula GTK skin + userChrome.css tweaks)
+- **Email Client**: Thunderbird
 - 
-<img width="2560" height="1440" alt="2025-08-26-01:55:48" src="https://github.com/user-attachments/assets/802d8af3-4657-4d66-a424-7a69a2f32351" />
+<img width="2560" height="1440" alt="2025-09-13-01:50:10" src="https://github.com/user-attachments/assets/bcef5e49-dd62-4f82-9ce2-04ffe07026e7" />
 
 ## 🚀 Features
-
-✅ Dracula-inspired dark theme across all apps  
+ 
 ✅ Flavours integration for consistent Base16 colors  
 ✅ Animations and subtle fades in Picom  
 ✅ Polybar with icons, weather, and Spotify control  
