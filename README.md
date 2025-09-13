@@ -23,9 +23,9 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 
 - **Window Manager**: i3-gaps
 - **Terminal Emulator**: Kitty
-- **Launcher**: Rofi (Dracula themed)
+- **Launcher**: Rofi 
 - **Notification Daemon**: Dunst
-- **Compositor**: Picom (fading transitions)
+- **Compositor**: Picom
 - **File Manager**: Thunar
 - **Status Bar**: Polybar
 - **Email Client**: Thunderbird
@@ -38,3 +38,4 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 ✅ Animations and subtle fades in Picom  
 ✅ Polybar with icons, weather, and Spotify control  
 ✅ Clean, organized configs for easy tweaks  
+✅ Custom tray basic icons with rofi controls for wifi and bluetooth 
