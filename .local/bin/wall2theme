@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+# wall2theme: Set wallpaper, generate pywal colors, convert to base16,
+# then apply via Flavours. Designed for Arch+i3 with Flavours theming.
+set -euo pipefail
+
+WALL_ARG="${1:-}"          # file or directory (optional)
+MODE="${2:-}"              # --random optional
+WAL_CACHE="$HOME/.cache/wal/colors.json"
+BASE16_DIR="$HOME/.config/flavours/base16"
+BASE16_FILE="$BASE16_DIR/wal-current.yaml"
+SCHEME_NAME="Wal (auto)"
+AUTHOR_NAME="${USER:-you}"
+
+pick_wall() {
+  if [[ -z "$WALL_ARG" ]]; then
+    echo "Error: pass a wallpaper file or directory" >&2
+    exit 1
+  fi
+  if [[ -d "$WALL_ARG" ]]; then
+    if [[ "$MODE" == "--random" ]]; then
+      find "$WALL_ARG" -type f -iregex '.*\.\(png\|jpg\|jpeg\|webp\)$' -print0 \
+        | shuf -z -n1 | xargs -0 -I{} echo {}
+    else
+      # first image
+      find "$WALL_ARG" -type f -iregex '.*\.\(png\|jpg\|jpeg\|webp\)$' | head -n1
+    fi
+  else
+    echo "$WALL_ARG"
+  fi
+}
+
+wall="$(pick_wall)"
+[[ -z "$wall" ]] && { echo "No wallpaper found." >&2; exit 1; }
+
+# 1) Set wallpaper (feh) so your desktop changes immediately
+feh --no-fehbg --bg-fill "$wall"
+
+# 2) Generate pywal colors (quiet, no changing terminals automatically)
+wal -i "$wall" -n -q
+
+# 3) Build base16 YAML from pywal colors.json
+mkdir -p "$BASE16_DIR"
+jq -r --arg scheme "$SCHEME_NAME" --arg author "$AUTHOR_NAME" '
+  def hex(x): (x|ascii_downcase|sub("^#";""));
+  {
+    scheme: $scheme,
+    author: $author,
+    base00: hex(.special.background),
+    base05: hex(.special.foreground),
+    base01: hex(.colors.color0),
+    base02: hex(.colors.color8),
+    base03: hex(.colors.color7),
+    base04: hex(.colors.color15),
+    base06: hex(.colors.color7),
+    base07: hex(.colors.color15),
+    base08: hex(.colors.color1),
+    base09: hex(.colors.color11),
+    base0A: hex(.colors.color3),
+    base0B: hex(.colors.color2),
+    base0C: hex(.colors.color6),
+    base0D: hex(.colors.color4),
+    base0E: hex(.colors.color5),
+    base0F: hex(.colors.color13)
+  }
+  | to_entries
+  | map(.key + ": \"" + .value + "\"")
+  | .[]
+' "$WAL_CACHE" > "$BASE16_FILE".tmp
+
+# Prepend proper YAML header order
+{
+  echo "scheme: \"$SCHEME_NAME\""
+  echo "author: \"$AUTHOR_NAME\""
+  grep -E '^base[0-9A-F]{2}:' "$BASE16_FILE".tmp
+} > "$BASE16_FILE"
+rm -f "$BASE16_FILE".tmp
+
+# 4) Apply with Flavours (expects your templates/config to be set up)
+#    -s accepts filename without extension
+flavours apply wal-current
+
+# 5) Reload common things (no hard restarts)
+# Xresources (if your configs read from it)
+[[ -f "$HOME/.cache/wal/colors.Xresources" ]] && xrdb -merge "$HOME/.cache/wal/colors.Xresources"
+
+# Polybar, dunst, eww, picom nudges (quiet if not running)
+polybar-msg cmd restart    >/dev/null 2>&1 || true
+killall -HUP dunst         >/dev/null 2>&1 || true
+eww reload                 >/dev/null 2>&1 || true
+i3-msg reload              >/dev/null 2>&1 || true
+# picom usually picks up changes from templated config on restart:
+# pkill -x picom; picom --experimental-backends & disown  # if you want
+

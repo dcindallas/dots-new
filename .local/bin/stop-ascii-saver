@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# close the saver if it exists
+i3-msg '[class="AsciiSaver"] kill' >/dev/null
+# fallback: kill the kitty instance by class/title
+pkill -f 'kitty.*AsciiSaver' 2>/dev/null || true

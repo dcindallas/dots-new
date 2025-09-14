@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+APP='cmatrix -ab -u 4 -s -C green'
+
+kitty \
+  --detach \
+  --class AsciiSaver --title AsciiSaver \
+  --single-instance --instance-group AsciiSaver \
+  bash -lc "$APP" >/dev/null 2>&1

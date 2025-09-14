@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+THEME="$HOME/.config/rofi/wifi-menu.rasi"
+# Try common wifi scripts; use the first found
+for cmd in rofi-wifi-menu rofi-network-manager rofi-wifi; do
+  if command -v "$cmd" >/dev/null 2>&1; then
+    exec "$cmd" -theme "$THEME" "$@"
+  fi
+done
+notify-send "Rofi Wi-Fi" "No rofi Wi-Fi script found."
+
