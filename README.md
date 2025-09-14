@@ -34,6 +34,7 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 ✅ Polybar with icons, weather, and Spotify control  
 ✅ Clean, organized configs for easy tweaks  
 ✅ Custom tray basic icons with rofi controls for wifi and bluetooth 
+✅ Screen Saver Scripts that manage screen lock and power 
 
 <img width="2560" height="1440" alt="2025-09-13-01:50:10" src="https://github.com/user-attachments/assets/bcef5e49-dd62-4f82-9ce2-04ffe07026e7" />
 
