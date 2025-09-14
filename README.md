@@ -9,15 +9,9 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 
 - **FlatColor (my custom Twilight x Everforest remix)**: [GitHub - FlatColor Theme](https://github.com/dracula/dracula-theme)  
 - **Flavours (Base16/Twilight integration across apps)**: [https://github.com/Misterio77/flavours](https://github.com/Misterio77/flavours)
-- **Wallpaper**:
+- **Spicetify 🎶 (Spotify theming to match the desktop)**: [https://github.com/spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
 
 <img width="1920" height="1080" alt="35" src="https://github.com/user-attachments/assets/27fa7501-7854-46c1-9972-f91935dc4aa1" />
-
-- ## 🎶 Extras
-
-- **Spicetify (Spotify theming to match the desktop)**: [https://github.com/spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
-
-<img width="2560" height="1440" alt="2025-09-13-01:25:04" src="https://github.com/user-attachments/assets/0b98b67f-ccd2-48a1-a725-c571722eaf4b" />
 
 ## 💻 Tools & Configs
 
@@ -29,8 +23,8 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **File Manager**: Thunar
 - **Status Bar**: Polybar
 - **Email Client**: Thunderbird
-- 
-<img width="2560" height="1440" alt="2025-09-13-01:50:10" src="https://github.com/user-attachments/assets/bcef5e49-dd62-4f82-9ce2-04ffe07026e7" />
+
+<img width="2560" height="1440" alt="2025-09-13-01:25:04" src="https://github.com/user-attachments/assets/0b98b67f-ccd2-48a1-a725-c571722eaf4b" />
 
 ## 🚀 Features
  
@@ -39,3 +33,6 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 ✅ Polybar with icons, weather, and Spotify control  
 ✅ Clean, organized configs for easy tweaks  
 ✅ Custom tray basic icons with rofi controls for wifi and bluetooth 
+
+<img width="2560" height="1440" alt="2025-09-13-01:50:10" src="https://github.com/user-attachments/assets/bcef5e49-dd62-4f82-9ce2-04ffe07026e7" />
+
