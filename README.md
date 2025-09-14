@@ -7,8 +7,8 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 
 ## 🎨 Themes & Color Schemes
 
-- **FlatColor (my custom Twilight x Everforest remix)**: [GitHub - FlatColor Theme](https://github.com/dracula/dracula-theme)  
-- **Flavours (Base16/Twilight integration across apps)**: [https://github.com/Misterio77/flavours](https://github.com/Misterio77/flavours)
+- **FlatColor GTK**: [GitHub - FlatColor Theme](https://github.com/dracula/dracula-theme)  
+- **Flavours (Base16 integration across apps)**: [https://github.com/Misterio77/flavours](https://github.com/Misterio77/flavours)
 - **Spicetify 🎶 (Spotify theming to match the desktop)**: [https://github.com/spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
 - **Current Wallpaper** 👇but theme is flexible check the wall folder 
 
