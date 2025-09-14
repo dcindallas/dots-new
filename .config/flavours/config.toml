@@ -91,6 +91,10 @@ end   = "# End flavours"
 rewrite = false
 posthook = "pkill -USR1 cava || true"
 
+[[items]]
+file = "/home/duane/.local/share/flavours/base16/templates/guake/templates/default.mustache"
+template = "guake"
+rewrite = true
 
 
 

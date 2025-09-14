@@ -104,7 +104,7 @@ exec_always --no-startup-id ~/.config/i3/xidle-saver.sh
 # Auto-move apps to workspaces
 for_window [class="google-chrome-stable"] move container to workspace 1
 for_window [class="Geany"] move container to workspace 2
-for_window [class="Thunar"] move container to workspace 2
+for_window [class="thunar"] move container to workspace 2
 for_window [class="thunderbird"] move container to workspace 3
 
 # ───────────────────────────────────────────────

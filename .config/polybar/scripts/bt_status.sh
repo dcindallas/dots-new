@@ -32,8 +32,8 @@ fi
 
 # Allow env overrides; then Xresources; then hard defaults
 C_MUTED="${BT_COLOR_MUTED:-${XR_COLOR8:-#6272a4}}"
-C_ACTIVE="${BT_COLOR_ACTIVE:-${XR_COLOR6:-${XR_COLOR4:-#8be9fd}}}"
-C_CONN="${BT_COLOR_CONN:-${XR_COLOR2:-#50fa7b}}"
+C_ACTIVE="${BT_COLOR_ACTIVE:-${XR_COLOR4:-${XR_COLOR4:-#8be9fd}}}"
+C_CONN="${BT_COLOR_CONN:-${XR_COLOR6:-#50fa7b}}"
 
 # emit with Polybar color tags only if hex looks valid
 paint() {
