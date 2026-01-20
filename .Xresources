@@ -2,22 +2,22 @@
 ! Base16 Base16 Twilight (Restored)
 ! Scheme: From original Base16 Twilight
 
-#define base00 #25292a
-#define base01 #323537
-#define base02 #464b50
-#define base03 #5f5a60
+#define base00 #1c1f20
+#define base01 #282c2e
+#define base02 #34393b
+#define base03 #404749
 #define base04 #838184
 #define base05 #fefef9
 #define base06 #a7a7a7
 #define base07 #ffffff
-#define base08 #cf6a4c
-#define base09 #f6b26b
-#define base0A #d5d0a1
-#define base0B #8f9d6a
-#define base0C #7cada2
-#define base0D #7587a6
-#define base0E #9b859d
-#define base0F #a06d3c
+#define base08 #e2655e
+#define base09 #d97e4a
+#define base0A #fcbf49
+#define base0B #a7c957
+#define base0C #00cccc
+#define base0D #3a86ff
+#define base0E #9381ff
+#define base0F #e9d985
 
 *foreground:   base05
 #ifdef background_opacity
@@ -58,10 +58,11 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 Xft.dpi: 109
-Xcursor.size: 16
 
 
 
 
 
 
+Xcursor.theme: default
+Xcursor.size: 24

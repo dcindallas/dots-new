@@ -33,12 +33,13 @@ for_window [class="File-roller"] floating enable
 for_window [class="Gpick"] floating enable
 for_window [class="PB_for_Desktop"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
-for_window [class="Guake Preferences"] floating enable
+for_window [class="Telegram"] floating enable
+for_window [class="Signal"] floating enable
 for_window [class="Yad"] floating enable
 for_window [class="gmic_qt"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="kdeconnect-sms"] floating enable
-for_window [instance="Msgcompose" class="thunderbird"] floating enable, resize set 1000px 750px
+for_window [window_role="Msgcompose"] floating enable, resize set 1000 px 750 px
 for_window [title="Copying"] floating enable
 for_window [title="Deleting"] floating enable
 for_window [title="Moving"] floating enable
@@ -52,12 +53,6 @@ for_window [window_role="^Preferences$"] floating enable
 for_window [window_role="setup"] floating enable
 # make the ascii saver float + fullscreen with no border
 for_window [class="AsciiSaver"] floating enable, fullscreen enable, border pixel 0
-
-# --- Dropdown Kitty ---
-set $dropdown_class dropdown
-
-# 1) (optional) auto-spawn on login so it's always ready
-exec --no-startup-id kitty --class $dropdown_class
 
 # 2) Style + placement + send to scratchpad when the window appears
 for_window [instance="$dropdown_class"] floating enable
@@ -74,9 +69,8 @@ bindsym $mod+grave exec --no-startup-id i3-msg "[instance=\"$dropdown_class\"] s
 # ───────────────────────────────────────────────
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-fill /home/duane/Pictures/wallpaper/35.png
-# exec --no-startup-id rclone mount google: ~/google
-exec --no-startup-id thunar --daemon
+exec --no-startup-id feh --bg-fill /home/duane/Pictures/wallpaper/waterfall2.jpg
+exec_always --no-startup-id unclutter -i
 exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id kdeconnect-indicator
 # exec --no-startup-id xsettingsd &
@@ -93,6 +87,7 @@ exec --no-startup-id playerctld daemon
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id geany
 exec --no-startup-id thunderbird
+exec --no-startup-id thunar --daemon
 exec_always --no-startup-id /home/duane/.config/polybar/launch.sh
 exec --no-startup-id dunst
 # ASCII saver after 2 min idle; stop on activity
@@ -100,7 +95,7 @@ exec --no-startup-id dunst
 exec_always --no-startup-id ~/.config/i3/xidle-saver.sh
 
 # hide the curosr when typing or idle.
-# exec --no-startup-id xbanish
+exec --no-startup-id xbanish
 # Auto-move apps to workspaces
 for_window [class="google-chrome-stable"] move container to workspace 1
 for_window [class="Geany"] move container to workspace 2
@@ -138,14 +133,14 @@ bindsym $mod+a exec rofi -show drun -theme /home/duane/.config/rofi/style-menu.r
 bindsym F4 exec rofi -show power-menu -theme /home/duane/.config/rofi/style-power.rasi -modi power-menu:rofi-power-menu -width 300
 bindsym F6 exec dunstctl history-pop
 # bindsym F7 exec --no-startup-id ~/bin/wal2flavours_duane.sh
-bindsym $mod+e exec rofi -modi emoji -show emoji -theme ~/.config/rofi/dc-theme.rasi
+bindsym $mod+e exec rofi -modi emoji -show emoji -theme ~/.config/rofi/style-menu.rasi
 
 # Common apps
 bindsym Print exec sh -c "sleep 3 && maim ~/Pictures/screenshots/$(date +%F-%T).png"
 bindsym $mod+Print exec xfce4-screenshooter
 bindsym $mod+w exec feh --randomize --bg-fill ~/Pictures/wallpaper/*
 
-
+bindsym $alt+o exec obsidian
 bindsym $alt+c exec gcolor2
 bindsym XF86HomePage exec --no-startup-id google-chrome-stable
 bindsym $alt+x exec google-chrome-stable
@@ -246,22 +241,22 @@ bindsym $mod+r mode "resize"
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #25292a
-set $base02 #464b50
-set $base02 #464b50
-set $base03 #5f5a60
+set $base00 #1c1f20
+set $base02 #34393b
+set $base02 #34393b
+set $base03 #404749
 set $base04 #838184
 set $base05 #fefef9
 set $base06 #a7a7a7
 set $base07 #ffffff
-set $base08 #cf6a4c
-set $base09 #f6b26b
-set $base0A #d5d0a1
-set $base0B #8f9d6a
-set $base0C #7cada2
-set $base0D #7587a6
-set $base0E #9b859d
-set $base0F #a06d3c
+set $base08 #e2655e
+set $base09 #d97e4a
+set $base0A #fcbf49
+set $base0B #a7c957
+set $base0C #00cccc
+set $base0D #3a86ff
+set $base0E #9381ff
+set $base0F #e9d985
 
 
 # Basic color configuration using the Base16 variables for windows and borders.

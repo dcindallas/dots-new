@@ -9,7 +9,7 @@ STOP="$HOME/.local/bin/stop-ascii-saver"
 LOCK="$HOME/.local/bin/lock-with-saver"
 
 exec xidlehook --detect-sleep \
-  --timer 120 "$START" "$STOP" \
+  --timer 300 "$START" "$STOP" \
   --timer 1440 "$LOCK" '' \
   --timer 1560 'xset dpms force off' 'xset dpms force on' \
-  --timer 1800 'systemctl suspend' ''
+  --timer 4200 'systemctl suspend' ''

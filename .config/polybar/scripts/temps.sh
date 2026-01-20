@@ -4,8 +4,8 @@
 LANG=C
 
 # ---------- COLORS (Smokula) ----------
-normal="%{F#8f9d6a}"   # green-ish OK
-warn="%{F#cf6a4c}"     # red/orange warn
+normal="%{F#a7c957}"   # green-ish OK
+warn="%{F#e2655e}"     # red/orange warn
 reset="%{F-}"
 
 # ---------- THRESHOLDS ----------
