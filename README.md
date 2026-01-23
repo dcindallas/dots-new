@@ -2,7 +2,7 @@
 
 Welcome to my personal dotfiles repository — a customized Arch Linux setup blending minimalism, style, and function. Built around the **FlatColor** GTK theme (my twist on Twilight), flavored using **Flavours**, and a seamless workflow across i3, Polybar, Rofi, Kitty, Dunst, and more.
 
-<img width="2560" height="1440" alt="2026-01-20-01:10:51" src="https://github.com/user-attachments/assets/5eb8cc4d-58f6-40c7-a11c-607c34eb6f26" />
+<img width="2560" height="1440" alt="2026-01-22-18:18:06" src="https://github.com/user-attachments/assets/925ae20a-c073-4f57-9c81-400474c44fe3" />
 
 
 ## 🎨 Themes & Color Schemes
@@ -11,7 +11,7 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **Flavours (Base16 integration across apps)**: [https://github.com/Misterio77/flavours](https://github.com/Misterio77/flavours)
 - **Spicetify 🎶 (Spotify theming to match the desktop)**: [https://github.com/spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
 
-<img width="2560" height="1440" alt="2026-01-22-18:18:06" src="https://github.com/user-attachments/assets/925ae20a-c073-4f57-9c81-400474c44fe3" />
+<img width="2560" height="1440" alt="2026-01-22-18:16:15" src="https://github.com/user-attachments/assets/cee73b14-8ac7-4e40-a0c7-3bc22f29cf27" />
 
 ## 💻 Tools & Configs
 
@@ -24,7 +24,7 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **Status Bar**: Polybar
 - **Email Client**: Thunderbird
 
-<img width="2560" height="1440" alt="2026-01-22-18:16:15" src="https://github.com/user-attachments/assets/cee73b14-8ac7-4e40-a0c7-3bc22f29cf27" />
+<img width="2560" height="1440" alt="2026-01-22-18:22:34" src="https://github.com/user-attachments/assets/0db9560a-2605-4e55-9227-1db2c0e601de" />
 
 ## 🚀 Features
  
