@@ -11,7 +11,7 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **Flavours (Base16 integration across apps)**: [https://github.com/Misterio77/flavours](https://github.com/Misterio77/flavours)
 - **Spicetify 🎶 (Spotify theming to match the desktop)**: [https://github.com/spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
 
-<img width="2560" height="1440" alt="2026-01-20-02:05:27" src="https://github.com/user-attachments/assets/d4f32713-6f3a-4885-ae39-b6fc222f0bec" />
+<img width="2560" height="1440" alt="2026-01-22-18:18:06" src="https://github.com/user-attachments/assets/925ae20a-c073-4f57-9c81-400474c44fe3" />
 
 ## 💻 Tools & Configs
 
@@ -24,7 +24,7 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 - **Status Bar**: Polybar
 - **Email Client**: Thunderbird
 
-<img width="2560" height="1440" alt="Screenshot_2026-01-20_02-10-20" src="https://github.com/user-attachments/assets/640388bc-348a-4cba-91a5-4e9927fda772" />
+<img width="2560" height="1440" alt="2026-01-22-18:16:15" src="https://github.com/user-attachments/assets/cee73b14-8ac7-4e40-a0c7-3bc22f29cf27" />
 
 ## 🚀 Features
  
