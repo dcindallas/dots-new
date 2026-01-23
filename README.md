@@ -34,8 +34,8 @@ Welcome to my personal dotfiles repository — a customized Arch Linux setup ble
 ✅ Clean, organized configs for easy tweaks  
 ✅ Custom tray basic icons with rofi controls for wifi and bluetooth 
 ✅ Screen Saver Scripts that manage screen lock and power 
-- **Current Wallpaper** 👇but theme is flexible check the wall folder 
 
-<img width="2560" height="1440" alt="Screenshot_2026-01-20_02-01-02" src="https://github.com/user-attachments/assets/45acfae6-21e6-4a35-a02b-83fe2f390479" />
+<img width="494" height="634" alt="Screenshot_2026-01-22_18-29-11" src="https://github.com/user-attachments/assets/f6f638b6-15ba-46ff-9a1c-2bf466396eea" /> <img width="1097" height="588" alt="Screenshot_2026-01-22_18-29-36" src="https://github.com/user-attachments/assets/7dcd12f5-343f-4a39-8165-60f696989029" />
+
 
 
