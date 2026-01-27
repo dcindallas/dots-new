@@ -1,6 +1,10 @@
-Well I finallly pulled the trigger and moved to hypr and I am not hating it. I did a fresh archinstall w/ minimum, iwctl to connect, and ran this script to install DankMaterialShell - a single, integrated solution built with Quickshell and Go. You can see the outcome **here** [(https://github.com/dcindallas/hypr-dots](https://github.com/dcindallas/hypr-dots)
+Well I finallly pulled the trigger and moved to:
 
-# Dotfiles: 
+- **hyprland**: [(https://hypr.land](https://hypr.land)
+- I am not hating it.
+- I did a fresh archinstall w/ minimum, iwctl to connect, and ran this script to install DankMaterialShell - a single, integrated solution built with Quickshell and Go. You can see the outcome **here** [(https://github.com/dcindallas/hypr-dots](https://github.com/dcindallas/hypr-dots)
+
+# But here you go my old i3 Dotfiles 😂: 
 
 Welcome to my personal dotfiles repository — a customized Arch Linux setup blending minimalism, style, and function. Built around the **FlatColor** GTK theme (my twist on Twilight), flavored using **Flavours**, and a seamless workflow across i3, Polybar, Rofi, Kitty, Dunst, and more.
 
