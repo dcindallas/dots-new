@@ -1,6 +1,9 @@
-Well I finallly pulled the trigger and moved to:
+## Well I finallly pulled the trigger and moved to:
 
 - **hyprland**: [(https://hypr.land](https://hypr.land)
+- 
+<img width="2560" height="1440" alt="screenshot_2026-01-24_19-28-43" src="https://github.com/user-attachments/assets/1e108500-0920-4593-b675-31e8998c8b47" />
+  
 - I am not hating it.
 - I did a fresh archinstall w/ minimum, iwctl to connect, and ran this script to install DankMaterialShell - a single, integrated solution built with Quickshell and Go.
 - You can see the outcome **here**: [(https://github.com/dcindallas/hypr-dots](https://github.com/dcindallas/hypr-dots)
