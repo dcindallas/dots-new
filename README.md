@@ -2,7 +2,9 @@ Well I finallly pulled the trigger and moved to:
 
 - **hyprland**: [(https://hypr.land](https://hypr.land)
 - I am not hating it.
-- I did a fresh archinstall w/ minimum, iwctl to connect, and ran this script to install DankMaterialShell - a single, integrated solution built with Quickshell and Go. You can see the outcome **here** [(https://github.com/dcindallas/hypr-dots](https://github.com/dcindallas/hypr-dots)
+- I did a fresh archinstall w/ minimum, iwctl to connect, and ran this script to install DankMaterialShell - a single, integrated solution built with Quickshell and Go.
+- You can see the outcome **here**: [(https://github.com/dcindallas/hypr-dots](https://github.com/dcindallas/hypr-dots)
+- You really should check out **DankLinux** really helped me understand hypr and how to structure the dots and workflow check **them**: [([https://github.com/dcindallas/hypr-dots](https://danklinux.com/)
 
 # But here you go my old i3 Dotfiles 😂: 
 
